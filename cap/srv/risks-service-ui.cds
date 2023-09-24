@@ -8,6 +8,11 @@ annotate RiskService.Risks with {
     impact @title: 'Impact';
 }
 
+annotate RiskService.Risks with {
+    title @Common.Label: '{i18n>Title}';
+    prio  @Common.Label: '{i18n>Priority}';
+}
+
 annotate RiskService.Mitigations with {
     ID          @(
         UI.Hidden,
