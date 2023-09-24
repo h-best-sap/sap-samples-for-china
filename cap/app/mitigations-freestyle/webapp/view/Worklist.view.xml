@@ -65,13 +65,22 @@
                             id="nameColumnTitle"
                         />
                     </Column>
-                    <Column
-                        id="unitNumberColumn"
-                        hAlign="End"
-                    >
+                    <Column id="DescriptionColumn">
                         <Text
-                            text="{i18n>tableUnitNumberColumnTitle}"
-                            id="unitNumberColumnTitle"
+                            text="Description"
+                            id="DescriptionColumnTitle"
+                        />
+                    </Column>
+                    <Column id="OwnerColumn">
+                        <Text
+                            text="Owner"
+                            id="OwnerColumnTitle"
+                        />
+                    </Column>
+                    <Column id="TimelineColumn">
+                        <Text
+                            text="Timeline"
+                            id="TimelineColumnTitle"
                         />
                     </Column>
                 </columns>
@@ -87,7 +96,18 @@
                                 id="_IDGenObjectIdentifier1"
                                 title="{ID}"
                             />
-                            <ObjectNumber id="_IDGenObjectNumber1" />
+                            <Text
+                                id="_IDGenText1"
+                                text="{description}"
+                            />
+                            <Text
+                                id="_IDGenText2"
+                                text="{owner}"
+                            />
+                            <Text
+                                id="_IDGenText3"
+                                text="{timeline}"
+                            />
                         </cells>
                     </ColumnListItem>
                 </items>

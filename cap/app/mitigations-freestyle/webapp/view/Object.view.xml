@@ -3,6 +3,7 @@
     xmlns="sap.m"
     xmlns:mvc="sap.ui.core.mvc"
     xmlns:semantic="sap.f.semantic"
+    xmlns:l="sap.ui.layout"
 >
     <semantic:SemanticPage
         id="page"
@@ -29,5 +30,25 @@
                 press=".onShareEmailPress"
             />
         </semantic:sendEmailAction>
+
+        <semantic:content>
+            <l:VerticalLayout id="_IDGenVerticalLayout1">
+                <ObjectStatus
+                    id="_IDGenObjectStatus1"
+                    title="Description"
+                    text="{description}"
+                />
+                <ObjectStatus
+                    id="_IDGenObjectStatus2"
+                    title="Owner"
+                    text="{owner}"
+                />
+                <ObjectStatus
+                    id="_IDGenObjectStatus3"
+                    title="Timeline"
+                    text="{timeline}"
+                />
+            </l:VerticalLayout>
+        </semantic:content>
     </semantic:SemanticPage>
 </mvc:View>
