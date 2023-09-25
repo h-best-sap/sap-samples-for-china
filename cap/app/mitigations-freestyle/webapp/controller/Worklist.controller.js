@@ -5,8 +5,9 @@ sap.ui.define(
     "../model/formatter",
     "sap/ui/model/Filter",
     "sap/ui/model/FilterOperator",
+    "sap/base/Log",
   ],
-  function (BaseController, JSONModel, formatter, Filter, FilterOperator) {
+  function (BaseController, JSONModel, formatter, Filter, FilterOperator, Log) {
     "use strict";
 
     return BaseController.extend(
@@ -23,7 +24,7 @@ sap.ui.define(
          * @public
          */
         onInit: function () {
-          var oViewModel;
+          let oViewModel;
 
           // keeps the search state
           this._aTableSearchState = [];
@@ -60,7 +61,7 @@ sap.ui.define(
          */
         onUpdateFinished: function (oEvent) {
           // update the worklist's object counter after the table update
-          var sTitle,
+          let sTitle,
             oTable = oEvent.getSource(),
             iTotalItems = oEvent.getParameter("total");
           // only update the counter if the length is final and
@@ -107,12 +108,13 @@ sap.ui.define(
             // refresh the list binding.
             this.onRefresh();
           } else {
-            var aTableSearchState = [];
-            var sQuery = oEvent.getParameter("query");
+            let aTableSearchState = [];
+            let sQuery = oEvent.getParameter("query");
+            Log.info(`sQuery: ${sQuery}`);
 
             if (sQuery && sQuery.length > 0) {
               aTableSearchState = [
-                new Filter("ID", FilterOperator.Contains, sQuery),
+                new Filter("description", FilterOperator.Contains, sQuery),
               ];
             }
             this._applySearch(aTableSearchState);
@@ -125,7 +127,7 @@ sap.ui.define(
          * @public
          */
         onRefresh: function () {
-          var oTable = this.byId("table");
+          let oTable = this.byId("table");
           oTable.getBinding("items").refresh();
         },
 
@@ -153,7 +155,7 @@ sap.ui.define(
          * @private
          */
         _applySearch: function (aTableSearchState) {
-          var oTable = this.byId("table"),
+          let oTable = this.byId("table"),
             oViewModel = this.getModel("worklistView");
           oTable.getBinding("items").filter(aTableSearchState, "Application");
           // changes the noDataText of the list in case there are no filter results
