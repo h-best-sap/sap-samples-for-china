@@ -2,6 +2,8 @@
 
 http://localhost:4004/risks/webapp/index.html?sap-language=zh
 
+http://localhost:4004/mitigations-freestyle/webapp/index.html?sap-language=zh
+
 Welcome to your new project.
 
 It contains these folders and files, following our recommended project layout:

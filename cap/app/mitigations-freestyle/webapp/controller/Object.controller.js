@@ -23,7 +23,7 @@ sap.ui.define(
         // Model used to manipulate control states. The chosen values make sure,
         // detail page shows busy indication immediately so there is no break in
         // between the busy indication for loading the view's meta data
-        var oViewModel = new JSONModel({
+        const oViewModel = new JSONModel({
           busy: true,
           delay: 0,
         });
@@ -43,7 +43,7 @@ sap.ui.define(
        * @public
        */
       onNavBack: function () {
-        var sPreviousHash = History.getInstance().getPreviousHash();
+        const sPreviousHash = History.getInstance().getPreviousHash();
         if (sPreviousHash !== undefined) {
           // eslint-disable-next-line sap-no-history-manipulation
           history.go(-1);
@@ -63,7 +63,7 @@ sap.ui.define(
        * @private
        */
       _onObjectMatched: function (oEvent) {
-        var sObjectId = oEvent.getParameter("arguments").objectId;
+        const sObjectId = oEvent.getParameter("arguments").objectId;
         this._bindView("/Mitigations" + sObjectId);
       },
 
@@ -74,7 +74,7 @@ sap.ui.define(
        * @private
        */
       _bindView: function (sObjectPath) {
-        var oViewModel = this.getModel("objectView");
+        const oViewModel = this.getModel("objectView");
 
         this.getView().bindElement({
           path: sObjectPath,
@@ -91,7 +91,7 @@ sap.ui.define(
       },
 
       _onBindingChange: function () {
-        var oView = this.getView(),
+        const oView = this.getView(),
           oViewModel = this.getModel("objectView"),
           oElementBinding = oView.getElementBinding();
 
@@ -101,7 +101,7 @@ sap.ui.define(
           return;
         }
 
-        var oResourceBundle = this.getResourceBundle(),
+        const oResourceBundle = this.getResourceBundle(),
           oObject = oView.getBindingContext().getObject(),
           sObjectId = oObject.ID,
           sObjectName = oObject.Mitigations;

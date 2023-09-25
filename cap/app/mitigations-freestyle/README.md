@@ -1,7 +1,5 @@
 ## Application Details
 
-http://localhost:4004/mitigations-freestyle/webapp/index.html?sap-language=zh
-
 |                                                                                         |
 | --------------------------------------------------------------------------------------- |
 | **Generation Date and Time**<br>Sun Sep 24 2023 17:08:59 GMT+0800 (China Standard Time) |
