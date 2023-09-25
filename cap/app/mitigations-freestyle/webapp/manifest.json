@@ -78,6 +78,10 @@
           "autoExpandSelect": true,
           "earlyRequests": true
         }
+      },
+      "customersJSONModel": {
+        "type": "sap.ui.model.json.JSONModel",
+        "uri": "model/customers-data.json"
       }
     },
     "resources": {
