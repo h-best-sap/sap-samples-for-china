@@ -1,13 +1,5 @@
 # Getting Started
 
-http://localhost:4004/risks/webapp/index.html?sap-language=zh
-
-http://localhost:4004/mitigations-freestyle/webapp/index.html?sap-language=zh
-
-fiori logging by setting the sap-ui-logLevel=<level>:
-
-?sap-ui-debug=true&sap-ui-logLevel=3
-
 ---
 
 Welcome to your new project.

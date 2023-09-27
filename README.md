@@ -1,4 +1,4 @@
-# Some SAP samples for China developer.
+# SAP samples for China developers.
 
 This repository contains some SAP BTP Samples for China developers including partners, customers, employees. We will describe details in Chinese for convenience.
 
@@ -10,7 +10,16 @@ This repository contains some SAP BTP Samples for China developers including par
 
 ## 层次结构
 
-- cap: node.js application
+- `cap`: node.js CAP application
+
+  - `./app/risks` 是 `Fiori Elements` webapp.
+  - `./app/mitigations-freestyle` 是 `Fiori Freestyle` webapp.
+  - 这两个 webapp 都使用 `./srv` 作为后端。`cds watch` 启动工程，访问 http://localhost:4004/launchpage.html 或者 http://localhost:4004/risks/webapp/index.html?sap-language=zh 或者 http://localhost:4004/mitigations-freestyle/webapp/index.html?sap-language=zh，其中 url 添加 `sap-language=zh` 参数可以实现页面的本地化，添加参数 `?sap-ui-debug=true&sap-ui-logLevel=3` 可以开启 Fiori Logger.
+
+- `quickstart.03` 从 https://sapui5.hana.ondemand.com/#/topic/073d1073fc604beda94589d5c93b32e2 下载下来的示例，配置静态文件服务器即可访问，比如 Nginx 等等。
+
+- `layout.SimpleForm` 从 https://sapui5.hana.ondemand.com/#/entity/sap.ui.layout.form.SimpleForm/sample/sap.ui.layout.sample.SimpleForm354wide 下载下来的示例，配置静态文件服务器即可访问，比如 Nginx 等等。
+
 - SAP API Business Hub
   - TODO
 - 前后端分离
