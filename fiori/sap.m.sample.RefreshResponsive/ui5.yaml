@@ -1,0 +1,9 @@
+specVersion: '3.0'
+metadata:
+  name: "sap-m-sample--refresh-responsive"
+type: application
+resources:
+  configuration:
+    paths:
+      webapp: .
+    - name: sap.ui.layout

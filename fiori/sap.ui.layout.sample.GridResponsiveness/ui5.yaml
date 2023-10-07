@@ -1,0 +1,11 @@
+specVersion: '3.0'
+metadata:
+  name: "sap-ui-layout-sample--grid-responsiveness"
+type: application
+resources:
+  configuration:
+    paths:
+      webapp: .
+    - name: sap.ui.core
+    - name: sap.ui.layout
+    - name: sap.m
