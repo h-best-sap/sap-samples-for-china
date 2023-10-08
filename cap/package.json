@@ -14,7 +14,8 @@
     "sqlite3": "^5"
   },
   "scripts": {
-    "start": "cds-serve",
+    "start": "cds watch",
+    "serve": "cds-serve",
     "watch-risks": "cds watch --open risks/webapp/index.html?sap-ui-xx-viewCache=false",
     "watch-mitigations-freestyle": "cds watch --open mitigations-freestyle/webapp/index.html?sap-ui-xx-viewCache=false"
   },
